@@ -30,8 +30,8 @@ public class BuildActionFactory extends TransientActionFactory<Job> {
         return Collections.singleton(new BuildAction(this,target));
     }
 
-    public StatusImage getBuildImage(BallColor ballColor, String style) throws IOException, FontFormatException {
-        return iconResolver.getBuildImage(ballColor, style);
+    public StatusImage getBuildImage(BallColor ballColor, String style, String subject) throws IOException, FontFormatException {
+        return iconResolver.getBuildImage(ballColor, style, subject);
     }
 
 }

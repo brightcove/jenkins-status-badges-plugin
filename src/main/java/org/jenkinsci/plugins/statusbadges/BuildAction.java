@@ -41,9 +41,9 @@ public class BuildAction
         return "statusbadges-build";
     }
 
-    public HttpResponse doIcon( StaplerRequest req, StaplerResponse rsp, @QueryParameter String style )
+    public HttpResponse doIcon( StaplerRequest req, StaplerResponse rsp, @QueryParameter String style, @QueryParameter String subject )
         throws IOException, FontFormatException
     {
-        return factory.getBuildImage( project.getIconColor(), style );
+        return factory.getBuildImage( project.getIconColor(), style, subject );
     }
 }

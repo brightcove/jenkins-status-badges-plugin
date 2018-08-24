@@ -49,11 +49,11 @@ public class PublicBuildAction
     }
 
     public HttpResponse doIcon( StaplerRequest req, StaplerResponse rsp, @QueryParameter String job,
-                                @QueryParameter String style )
+                                @QueryParameter String style, @QueryParameter String subject )
         throws IOException, FontFormatException
     {
         Job<?, ?> project = buildStatus.getProject( job, req, rsp );
-        return iconResolver.getBuildImage( project.getIconColor(), style );
+        return iconResolver.getBuildImage( project.getIconColor(), style, subject );
     }
 
 }

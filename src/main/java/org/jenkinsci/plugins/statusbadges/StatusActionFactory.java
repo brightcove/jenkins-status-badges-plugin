@@ -34,10 +34,10 @@ public class StatusActionFactory
         return Collections.singleton( new StatusAction( this, target ) );
     }
 
-    public StatusImage getBuildImage( BallColor color, String style )
+    public StatusImage getBuildImage( BallColor color, String style, String subject )
         throws IOException, FontFormatException
     {
-        return iconResolver.getBuildImage( color, style );
+        return iconResolver.getBuildImage( color, style, subject );
     }
 
 }

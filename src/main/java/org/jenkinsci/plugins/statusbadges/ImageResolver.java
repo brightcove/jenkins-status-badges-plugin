@@ -9,10 +9,12 @@ import java.util.Locale;
 public class ImageResolver
 {
 
-    public StatusImage getBuildImage( BallColor ballColor, String style )
+    public StatusImage getBuildImage( BallColor ballColor, String style, String subject )
         throws IOException, FontFormatException
     {
-        String subject = "build";
+        if (subject == null || subject.isEmpty()) {
+            subject = "build";
+        }
         String status = "unknown";
         String color;
 
